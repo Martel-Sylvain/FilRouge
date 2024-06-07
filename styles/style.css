@@ -1,0 +1,63 @@
+.chargement {
+    width: 430px;
+    height: 932px;
+    background-color: #000000;
+}
+
+.chargement .overlap {
+    position: relative;
+    height: 932px;
+    background-image: url(./img/texture-3.png);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.chargement .bar {
+    position: absolute;
+    width: 407px;
+    height: 28px;
+    top: 816px;
+    left: 11px;
+}
+
+.chargement .overlap-group {
+    position: relative;
+    height: 28px;
+}
+
+.chargement .group {
+    position: absolute;
+    width: 407px;
+    height: 28px;
+    top: 0;
+    left: 0;
+    background-color: var(--couleur-7);
+}
+
+.chargement .rectangle {
+    width: 16px;
+    height: 28px;
+    background-color: var(--couleur-4);
+}
+
+.chargement .texture {
+    position: absolute;
+    width: 407px;
+    height: 28px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.chargement .welcome {
+    position: absolute;
+    width: 250px;
+    height: 53px;
+    top: 129px;
+    left: 89px;
+}
+
+.chargement .div {
+    width: 252px;
+    height: 53px;
+}
