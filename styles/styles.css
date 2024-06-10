@@ -5,7 +5,7 @@
     src: url("../Fonts/COPRGTB.TTF") format("truetype")
 }
 
-/* RAZ DU CSS */
+/* RESET */
 
 *,
 ::before,
@@ -18,7 +18,14 @@
 
 /* FOND */
 
+html {
+    height: 100%;
+    margin: 0;
+}
+
 body {
+    height: 100%;
+    margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -69,7 +76,7 @@ body::before {
     background-image: url("../img/Texture-1.svg");
     background-size: cover;
     background-position: center;
-    background-repeat: repeat;
+    background-repeat: repeat-y;
     opacity: 0.05;
     z-index: -1;
 }
@@ -105,10 +112,61 @@ body::before {
 main {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     padding-top: 100px;
 }
 
 .main-logo {
     max-width: 60%;
     height: auto;
+    margin: 0 auto;
+}
+
+
+/* COMPTE A REBOURS */
+
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titre {
+    color: #D8D8D8;
+    font-family: "Copperlate-Gothic";
+    padding-top: 50px;
+}
+
+.compte {
+    color: #D8D8D8;
+    font-family: "Copperlate-Gothic";
+    display: inline-block;
+    font-size: 35px;
+    list-style-type: none;
+    padding: 30px;
+    text-transform: uppercase;
+}
+
+li span {
+    color: #D8D8D8;
+    display: block;
+    font-size: 50px;
+}
+
+/* VIDEO */
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 80%;
+}
+
+.video-rounded {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
 }
