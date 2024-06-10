@@ -11,9 +11,9 @@
     // 1-obtenir la date et l'heure actuelle
     let today = new Date(),
         // 2-trouver le jour du mois et le convertir en chaine de caractère(string), assure de mettre toujours 2 caractères au résultat (padStart)
-        dd = String(today.getDate()).padStart(2, "0"),
+        dd = String(today.getDate()).padStart(2, "00"),
         // 3-même chose pour le mois
-        mm = String(today.getMonth() + 1).padStart(2, "0"),
+        mm = String(today.getMonth() + 1).padStart(2, "00"),
         // 4-pour l'année, donnera un nombre à 4 chiffres
         yyyy = today.getFullYear(),
         // 5-définition de la date de fin, la date de l'évènement
@@ -48,12 +48,10 @@
 
         // on vérifie si on a atteint la date cible
         if (distance < 0) {
-            // le texte avec l'ID headline est mis à jour
-            document.getElementById("headline").innerText = "C'est parti!!";
-            // l'élément avec l'ID countdown est caché
-            document.getElementById("countdown").style.display = "none";
-            // l'élément avec l'ID content est affiché
-            document.getElementById("content").style.display = "block";
+            // le texte avec l'ID titre_compte_à_rebours est mis à jour
+            document.getElementById("titre_compte_à_rebours").innerText = "C'est parti!!";
+            // l'élément avec l'ID compte_à_rebours est caché
+            document.getElementById("compte_à_rebours").style.display = "none";
             // permet d'arrêter notre fonction Interval
             clearInterval(x);
         }

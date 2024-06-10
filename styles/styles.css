@@ -18,10 +18,6 @@
 
 /* FOND */
 
-html {
-    height: 100%;
-    margin: 0;
-}
 
 body {
     height: 100%;
@@ -38,7 +34,7 @@ body::before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 400%;
     background-image: url("../img/Texture-3.svg");
     background-size: cover;
     background-position: center;
@@ -63,7 +59,7 @@ body::before {
 }
 
 .navbar img {
-    width: 100px;
+    width: 80px;
 }
 
 .navbar::before {
@@ -76,12 +72,12 @@ body::before {
     background-image: url("../img/Texture-1.svg");
     background-size: cover;
     background-position: center;
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
     opacity: 0.05;
     z-index: -1;
 }
 
-.nav-links {
+.nav_links {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
@@ -89,7 +85,7 @@ body::before {
     flex-grow: 1;
 }
 
-.nav-links li {
+.nav_links li {
     display: inline;
 }
 
@@ -98,7 +94,7 @@ body::before {
     text-decoration: none;
     padding: 0.5em 1em;
     font-family: "Copperlate-Gothic";
-    font-size: 23px;
+    font-size: 20px;
     transition: color 0.3s ease;
 }
 
@@ -116,7 +112,7 @@ main {
     padding-top: 100px;
 }
 
-.main-logo {
+.main_logo {
     max-width: 60%;
     height: auto;
     margin: 0 auto;
@@ -126,12 +122,12 @@ main {
 /* COMPTE A REBOURS */
 
 
-.container {
+.container_compte_à_rebours {
     margin: 0 auto;
     text-align: center;
 }
 
-.titre {
+#titre_compte_à_rebours {
     color: #D8D8D8;
     font-family: "Copperlate-Gothic";
     padding-top: 50px;
@@ -141,7 +137,7 @@ main {
     color: #D8D8D8;
     font-family: "Copperlate-Gothic";
     display: inline-block;
-    font-size: 35px;
+    font-size: 25px;
     list-style-type: none;
     padding: 30px;
     text-transform: uppercase;
@@ -155,18 +151,25 @@ li span {
 
 /* VIDEO */
 
-.video-container {
+.video_container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 10px;
     width: 80%;
 }
 
-.video-rounded {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
+/* GROUPES */
+
+.titre_logos {
+    color: #D8D8D8;
+    font-family: "Copperlate-Gothic";
+    padding-top: 50px;
+}
+
+.logo {
+    width: 30%;
+    margin: 30px auto;
 }
