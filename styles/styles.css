@@ -56,6 +56,7 @@ body::before {
     justify-content: space-between;
     align-items: center;
     z-index: 2;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .navbar img {
@@ -96,6 +97,7 @@ body::before {
     font-family: "Copperlate-Gothic";
     font-size: 20px;
     transition: color 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .navbar a:hover {
@@ -159,17 +161,33 @@ li span {
     overflow: hidden;
     border-radius: 10px;
     width: 80%;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 /* GROUPES */
 
 .titre_logos {
+    text-align: center;
     color: #D8D8D8;
     font-family: "Copperlate-Gothic";
     padding-top: 50px;
 }
 
+.container_logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .logo {
-    width: 30%;
-    margin: 30px auto;
+    width: 10%;
+    margin: 10px;
+    padding: 0;
+}
+
+.logo:hover {
+    background-color: #f5bc0056;
+    border-radius: 10px;
+    cursor: pointer;
+
 }
