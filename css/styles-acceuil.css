@@ -1,0 +1,278 @@
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--background-dark-1);
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400%;
+    background-image: url("../img/Textures/Texture_1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+
+/* --------------------------------------------------------------------- */
+/* ACCEUIL */
+
+/* MAIN */
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+/* LOGO */
+
+.main_logo {
+    text-align: center;
+}
+
+.img_logo {
+    width: 60%;
+    filter: drop-shadow(5px 5px 10px rgba(68, 5, 5, 0.5));
+}
+
+.main_title {
+    font-family: "Copperlate-Gothic";
+    color: var(--color-3);
+    text-transform: uppercase;
+    font-size: 120px;
+    font-weight: 600;
+}
+
+/* YEAR ANIMATION */
+
+.year_animation {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    transform: translate(500px, -20px);
+    rotate: -5deg;
+}
+
+.animate_text,
+.invisible_text {
+    font-family: "Copperlate-Gothic";
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.animate_text {
+    position: absolute;
+    top: 0;
+    opacity: 0.9;
+}
+
+.invisible_text {
+    visibility: hidden;
+}
+
+.animate_text:nth-child(2) {
+    color: rgb(102, 16, 16);
+    animation: textAnimation1 infinite;
+}
+
+.animate_text:nth-child(3) {
+    color: #D8D8D8;
+    animation: textAnimation2 3s infinite;
+}
+
+.animate_text:nth-child(4) {
+    color: #F5BA00;
+    animation: textAnimation3 3s infinite;
+}
+
+@keyframes textAnimation1 {
+    20% {
+        transform: none;
+    }
+
+    23% {
+        transform: skew(5deg, -5deg) translate(10px, 5px);
+    }
+
+    26% {
+        transform: none;
+    }
+
+    40% {
+        transform: none;
+    }
+
+    43% {
+        transform: skew(5deg, -10deg) translate(-5px, 2px);
+    }
+
+    46% {
+        transform: none;
+    }
+
+    100% {
+        transform: none;
+    }
+}
+
+@keyframes textAnimation2 {
+    7% {
+        transform: none;
+    }
+
+    10% {
+        transform: translate(6px, -2px);
+    }
+
+    13% {
+        transform: none;
+    }
+
+    20% {
+        transform: none;
+    }
+
+    23% {
+        transform: translate(-12px, -7px);
+    }
+
+    26% {
+        transform: none;
+    }
+
+    40% {
+        transform: none;
+    }
+
+    43% {
+        transform: translate(10px, -9px);
+    }
+
+    46% {
+        transform: none;
+    }
+
+    65% {
+        transform: none;
+    }
+
+    68% {
+        transform: translate(7px, 5px);
+    }
+
+    71% {
+        transform: none;
+    }
+
+    100% {
+        transform: none;
+    }
+}
+
+@keyframes textAnimation3 {
+    7% {
+        transform: none;
+    }
+
+    10% {
+        transform: translate(-6px, 2px);
+    }
+
+    13% {
+        transform: none;
+    }
+
+    20% {
+        transform: none;
+    }
+
+    23% {
+        transform: translate(12px, 7px);
+    }
+
+    26% {
+        transform: none;
+    }
+
+    40% {
+        transform: none;
+    }
+
+    43% {
+        transform: translate(-10px, 9px);
+    }
+
+    46% {
+        transform: none;
+    }
+
+    65% {
+        transform: none;
+    }
+
+    68% {
+        transform: translate(-7px, 5px);
+    }
+
+    71% {
+        transform: none;
+    }
+
+    100% {
+        transform: none;
+    }
+}
+
+
+/* COUNTDOWN */
+
+
+.container_compte_à_rebours {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#titre_compte_à_rebours {
+    color: #D8D8D8;
+    font-family: "Copperlate-Gothic";
+    padding-top: 50px;
+}
+
+.compte {
+    color: #D8D8D8;
+    font-family: "Copperlate-Gothic";
+    display: inline-block;
+    font-size: 25px;
+    list-style-type: none;
+    padding: 30px;
+    text-transform: uppercase;
+}
+
+li span {
+    color: #D8D8D8;
+    display: block;
+    font-size: 50px;
+}
+
+/* VIDEO */
+
+.video_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}

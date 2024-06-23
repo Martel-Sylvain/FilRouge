@@ -1,0 +1,138 @@
+/* FONTS */
+
+@font-face {
+    font-family: "Copperlate-Gothic";
+    src: url("../fonts/COPRGTB.TTF") format("truetype")
+}
+
+/* RESET */
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* FOND */
+
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--background-dark-1);
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400%;
+    background-image: url("../img/Texture-3.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background-color: var(--header-background-color-3);
+    color: var(--text-color-2);
+    padding: 0.3em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.navbar img {
+    width: 80px;
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/Texture-1.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.nav_links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.nav_links li {
+    display: inline;
+}
+
+.navbar a {
+    color: var(--text-color-2);
+    text-decoration: none;
+    padding: 0.5em 1em;
+    font-family: "Copperlate-Gothic";
+    font-size: 20px;
+    transition: color 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar a:hover {
+    color: var(--color-4);
+}
+
+/* SLIDER */
+
+.slider {
+    margin-top: 100px;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(50%);
+    }
+}
+
+.texte_message {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slide 5s linear infinite;
+}
+
+p {
+    width: 150px;
+    margin: 0 25px;
+    color: white;
+}

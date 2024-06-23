@@ -1,0 +1,223 @@
+/* FOND */
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100vh;
+    background-color: var(--background-light-2);
+    transform-style: preserve-3d;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400%;
+    background-image: url("");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* CARDS */
+
+.card {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    width: 400px;
+    margin: 0 auto;
+    cursor: pointer;
+    perspective: 1500px;
+
+}
+
+.card-side {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.8s ease-in-out;
+    position: absolute;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4),
+        6px 6px 20px rgba(0, 0, 0, 0.2);
+    /* background-image: url('../img/Textures/Texture_1.jpg'); */
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+
+.card-side.back {
+    transform: rotateY(-180deg);
+}
+
+/* .card:hover .card-side.front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-side.back {
+    transform: rotateY(0deg);
+} */
+
+.card.is-flipped .card-side.front {
+    transform: rotateY(180deg);
+}
+
+.card.is-flipped .card-side.back {
+    transform: rotateY(0deg);
+}
+
+.card-side img,
+.card-side .logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* CARD SLIDER  */
+.card_slider {
+    position: relative;
+    display: flex;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.card_slider .card_item {
+    position: absolute;
+    left: calc(50% - 200px);
+    top: calc(50% - 250px);
+    width: 400px;
+    height: 500px;
+    background: none;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform-origin: bottom;
+    user-select: none;
+}
+
+.card_slider .card_item:nth-child(1) {
+    transform: translate3d(-350px, 0, 0) scale(0.8) rotateY(25deg);
+    z-index: 1;
+    width: 80%;
+}
+
+.card_slider .card_item:nth-child(2) {
+    transform: translate3d(-350px, 0, 0) scale(0.8) rotateY(25deg);
+    z-index: 1;
+}
+
+.card_slider .card_item:nth-child(3) {
+    transform: translate3d(-350px, 0, 0) scale(0.8) rotateY(25deg);
+    z-index: 2;
+}
+
+.card_slider .card_item:nth-child(4) {
+    transform: translate3d(-250px, 0, 0) scale(0.9) rotateY(25deg);
+    z-index: 3;
+}
+
+.card_slider .card_item:nth-child(5) {
+    transform: translate3d(0px, 0, 0) scale(1) rotateY(0deg);
+    z-index: 10;
+
+}
+
+.card_slider .card_item:nth-child(6) {
+    transform: translate3d(250px, 0, 0) scale(0.9) rotateY(-15deg);
+    z-index: 3;
+}
+
+.card_slider .card_item:nth-child(7) {
+    transform: translate3d(350px, 0, 0) scale(0.8) rotateY(-25deg);
+    z-index: 2;
+}
+
+.card_slider .card_item:nth-child(8) {
+    transform: translate3d(350px, 0, 0) scale(0.8) rotateY(-25deg);
+    z-index: -1;
+}
+
+.card_slider .card_item:nth-child(9) {
+    transform: translate3d(350px, 0, 0) scale(0.8) rotateY(-25deg);
+    z-index: -1;
+}
+
+.card_slider .card_item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card_slider .card_item .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* BUTTONS */
+
+.buttons {
+    position: absolute;
+    bottom: 75px;
+    display: flex;
+    gap: 20px;
+}
+
+.buttons span {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.buttons span:hover {
+    opacity: 1;
+}
+
+
+.buttons span::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    rotate: -45deg;
+}
+
+.buttons span:last-child::before {
+    content: '';
+    position: absolute;
+    left: initial;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    rotate: 135deg;
+}
