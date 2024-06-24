@@ -88,12 +88,12 @@ main {
 }
 
 .animate_text:nth-child(3) {
-    color: #D8D8D8;
+    color: var(--color-2);
     animation: textAnimation2 3s infinite;
 }
 
 .animate_text:nth-child(4) {
-    color: #F5BA00;
+    color: var(--color-4);
     animation: textAnimation3 3s infinite;
 }
 
@@ -245,13 +245,13 @@ main {
 }
 
 #titre_compte_à_rebours {
-    color: #D8D8D8;
+    color: var(--color-2);
     font-family: "Copperlate-Gothic";
     padding-top: 50px;
 }
 
 .compte {
-    color: #D8D8D8;
+    color: var(--color-2);
     font-family: "Copperlate-Gothic";
     display: inline-block;
     font-size: 25px;
@@ -261,7 +261,7 @@ main {
 }
 
 li span {
-    color: #D8D8D8;
+    color: var(--color-2);
     display: block;
     font-size: 50px;
 }
@@ -283,7 +283,7 @@ li span {
 }
 
 .headliners_title {
-    color: #D8D8D8;
+    color: var(--color-2);
     font-family: "Copperlate-Gothic";
     margin: 50px auto;
     text-align: center;
@@ -301,7 +301,7 @@ li span {
 .headliners_bands {
     width: 115px;
     height: 115px;
-    background-color: #000;
+    background-color: var(--background-dark-1);
 }
 
 

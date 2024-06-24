@@ -21,7 +21,7 @@ main {
 .item {
     width: 300px;
     height: 169px;
-    background-color: black;
+    background-color: var(--background-dark-1);
     list-style-type: none;
     position: absolute;
     top: 75%;
@@ -320,7 +320,7 @@ main {
     left: 3rem;
     transform: translateY(-50%);
     font: 400 0.85rem helvetica, sans-serif;
-    color: white;
+    color: var(--color-2);
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
     opacity: 0;
     display: none;
@@ -346,19 +346,20 @@ main {
 .content button {
     width: fit-content;
     background-color: rgba(0, 0, 0, 0.1);
-    color: white;
-    border: 2px solid white;
+    color: var(--color-2);
+    border: 2px solid var(--color-2);
     border-radius: 0.25rem;
     padding: 0.75rem;
     cursor: pointer;
 }
 
 button:hover {
-    color: red;
+    color: var(--color-4);
 }
 
 .button-active {
-    background-color: green !important;
+    background-color: var(--color-4) !important;
+    color: var(--color-1) !important;
 }
 
 .item:nth-of-type(2) .content {
@@ -394,7 +395,7 @@ button:hover {
     position: relative;
     width: 50px;
     height: 50px;
-    border: 2px solid #fff;
+    border: 2px solid var(--color-2);
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -405,6 +406,7 @@ button:hover {
 
 .buttons span:hover {
     opacity: 1;
+    background-color: var(--color-4);
 }
 
 .buttons span::before {
@@ -413,8 +415,8 @@ button:hover {
     left: 20px;
     width: 10px;
     height: 10px;
-    border-top: 2px solid #fff;
-    border-left: 2px solid #fff;
+    border-top: 2px solid var(--color-2);
+    border-left: 2px solid var(--color-2);
     rotate: -45deg;
 }
 
@@ -425,8 +427,8 @@ button:hover {
     right: 20px;
     width: 10px;
     height: 10px;
-    border-top: 2px solid #fff;
-    border-left: 2px solid #fff;
+    border-top: 2px solid var(--color-2);
+    border-left: 2px solid var(--color-2);
     rotate: 135deg;
 }
 

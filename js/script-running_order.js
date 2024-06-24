@@ -11,6 +11,10 @@
 // }
 
 
+function goToLineUp(elementId) {
+    localStorage.setItem('scrollToElement', elementId);
+    window.location.href = 'index-line_up.html';
+}
 
 window.onload = function () {
     let elementsToColor = JSON.parse(localStorage.getItem('elementsToColor')) || [];
@@ -20,4 +24,4 @@ window.onload = function () {
             element.classList.add('colored');
         }
     });
-}
+};

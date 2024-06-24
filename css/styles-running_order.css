@@ -7,23 +7,71 @@
     align-items: center;
 }
 
+/* #region Borders */
+.running_order>div {
+    border: 1px solid black;
+}
+
+
 .colored {
     background-color: green;
 }
 
-/* scenes */
+div.day {
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+}
+
+div.hour1 {
+    border-left: 2px solid black;
+}
+
+div.hour2 {
+    border-right: 2px solid black;
+}
+
+div.hour_14 {
+    border-top: 2px solid black;
+}
+
+div.hour_12,
+div.hour_25 {
+    border-bottom: 2px solid black;
+}
+
+
+div.stage {
+    border-top: 2px solid black;
+}
+
+div.stage_3 {
+    border-right: 2px solid black;
+}
+
+div.empty_17,
+div.empty_18,
+div.band_18 {
+    border-bottom: 2px solid black;
+}
+
+/* #endregion border */
+
+
+
 .stage,
 .day,
-.hour,
-.band {
+.hour1,
+.hour2,
+.band,
+.empty {
     width: 100%;
     Height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #000;
 }
 
+/* stages */
 .stage_1 {
     grid-area: 1 / 2 / 2 / 3;
 }
@@ -36,7 +84,7 @@
     grid-area: 1 / 4 / 2 / 5;
 }
 
-/* jours */
+/* days */
 .day {
     grid-area: 1 / 1 / 2 / 2;
 }
@@ -90,10 +138,6 @@
     grid-area: 13 / 1 / 14 / 2;
 }
 
-.hour_13 {
-    grid-area: 14 / 1 / 15 / 2;
-}
-
 /* right hours */
 .hour_14 {
     grid-area: 2 / 5 / 3 / 6;
@@ -141,10 +185,6 @@
 
 .hour_25 {
     grid-area: 13 / 5 / 14 / 6;
-}
-
-.hour_26 {
-    grid-area: 14 / 5 / 15 / 6;
 }
 
 /* bands */
@@ -218,4 +258,77 @@
 
 .band_18 {
     grid-area: 13 / 3 / 14 / 4;
+}
+
+/* empty */
+.empty_1 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.empty_2 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.empty_3 {
+    grid-area: 3 / 4 / 4 / 5;
+}
+
+.empty_4 {
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+.empty_5 {
+    grid-area: 5 / 2 / 6 / 3;
+}
+
+.empty_6 {
+    grid-area: 5 / 4 / 6 / 5;
+}
+
+.empty_7 {
+    grid-area: 6 / 3 / 7 / 4;
+}
+
+.empty_8 {
+    grid-area: 7 / 2 / 8 / 3;
+}
+
+.empty_9 {
+    grid-area: 7 / 4 / 8 / 5;
+}
+
+.empty_10 {
+    grid-area: 8 / 3 / 9 / 4;
+}
+
+.empty_11 {
+    grid-area: 9 / 2 / 10 / 3;
+}
+
+.empty_12 {
+    grid-area: 9 / 4 / 10 / 5;
+}
+
+.empty_13 {
+    grid-area: 10 / 3 / 11 / 4;
+}
+
+.empty_14 {
+    grid-area: 11 / 2 / 12 / 3;
+}
+
+.empty_15 {
+    grid-area: 11 / 4 / 12 / 5;
+}
+
+.empty_16 {
+    grid-area: 12 / 3 / 13 / 4;
+}
+
+.empty_17 {
+    grid-area: 13 / 2 / 14 / 3;
+}
+
+.empty_18 {
+    grid-area: 13 / 4 / 14 / 5;
 }
