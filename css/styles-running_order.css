@@ -1,0 +1,221 @@
+.running_order {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: repeat(15, 50px);
+    justify-items: center;
+    align-items: center;
+}
+
+.colored {
+    background-color: green;
+}
+
+/* scenes */
+.stage,
+.day,
+.hour,
+.band {
+    width: 100%;
+    Height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+}
+
+.stage_1 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.stage_2 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.stage_3 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+/* jours */
+.day {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+/* left hours */
+.hour_1 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.hour_2 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.hour_3 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.hour_4 {
+    grid-area: 5 / 1 / 6 / 2;
+}
+
+.hour_5 {
+    grid-area: 6 / 1 / 7 / 2;
+}
+
+.hour_6 {
+    grid-area: 7 / 1 / 8 / 2;
+}
+
+.hour_7 {
+    grid-area: 8 / 1 / 9 / 2;
+}
+
+.hour_8 {
+    grid-area: 9 / 1 / 10 / 2;
+}
+
+.hour_9 {
+    grid-area: 10 / 1 / 11 / 2;
+}
+
+.hour_10 {
+    grid-area: 11 / 1 / 12 / 2;
+}
+
+.hour_11 {
+    grid-area: 12 / 1 / 13 / 2;
+}
+
+.hour_12 {
+    grid-area: 13 / 1 / 14 / 2;
+}
+
+.hour_13 {
+    grid-area: 14 / 1 / 15 / 2;
+}
+
+/* right hours */
+.hour_14 {
+    grid-area: 2 / 5 / 3 / 6;
+}
+
+.hour_15 {
+    grid-area: 3 / 5 / 4 / 6;
+}
+
+.hour_16 {
+    grid-area: 4 / 5 / 5 / 6;
+}
+
+.hour_17 {
+    grid-area: 5 / 5 / 6 / 6;
+}
+
+.hour_18 {
+    grid-area: 6 / 5 / 7 / 6;
+}
+
+.hour_19 {
+    grid-area: 7 / 5 / 8 / 6;
+}
+
+.hour_20 {
+    grid-area: 8 / 5 / 9 / 6;
+}
+
+.hour_21 {
+    grid-area: 9 / 5 / 10 / 6;
+}
+
+.hour_22 {
+    grid-area: 10 / 5 / 11 / 6;
+}
+
+.hour_23 {
+    grid-area: 11 / 5 / 12 / 6;
+}
+
+.hour_24 {
+    grid-area: 12 / 5 / 13 / 6;
+}
+
+.hour_25 {
+    grid-area: 13 / 5 / 14 / 6;
+}
+
+.hour_26 {
+    grid-area: 14 / 5 / 15 / 6;
+}
+
+/* bands */
+.band_1 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.band_2 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.band_3 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.band_4 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.band_5 {
+    grid-area: 4 / 4 / 5 / 5;
+}
+
+.band_6 {
+    grid-area: 5 / 3 / 6 / 4;
+}
+
+.band_7 {
+    grid-area: 6 / 2 / 7 / 3;
+}
+
+.band_8 {
+    grid-area: 6 / 4 / 7 / 5;
+}
+
+.band_9 {
+    grid-area: 7 / 3 / 8 / 4;
+}
+
+.band_10 {
+    grid-area: 8 / 2 / 9 / 3;
+}
+
+.band_11 {
+    grid-area: 8 / 4 / 9 / 5;
+}
+
+.band_12 {
+    grid-area: 9 / 3 / 10 / 4;
+}
+
+.band_13 {
+    grid-area: 10 / 2 / 11 / 3;
+}
+
+.band_14 {
+    grid-area: 10 / 4 / 11 / 5;
+}
+
+.band_15 {
+    grid-area: 11 / 3 / 12 / 4;
+}
+
+.band_16 {
+    grid-area: 12 / 2 / 13 / 3;
+}
+
+.band_17 {
+    grid-area: 12 / 4 / 13 / 5;
+}
+
+.band_18 {
+    grid-area: 13 / 3 / 14 / 4;
+}

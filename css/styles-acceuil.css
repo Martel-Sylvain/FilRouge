@@ -276,3 +276,78 @@ li span {
     overflow: hidden;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
+/* HEADLINE */
+.headliners {
+    display: block;
+}
+
+.headliners_title {
+    color: #D8D8D8;
+    font-family: "Copperlate-Gothic";
+    margin: 50px auto;
+    text-align: center;
+}
+
+.headliners_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.headliners_bands {
+    width: 115px;
+    height: 115px;
+    background-color: #000;
+}
+
+
+.headliners_container .headliners_bands {
+    width: 110px;
+    transition: 0.5s;
+    filter: brightness(0.2);
+}
+
+.headliners_bands:has(+*+*+*:hover) {
+    /*   :has(+*:hover) = élément précédent    */
+    filter: brightness(0.2);
+    transform: translateZ(30px) rotateY(-10deg);
+}
+
+.headliners_bands:has(+*+*:hover) {
+    /*   :has(+*:hover) = élément précédent    */
+    filter: brightness(0.4);
+    transform: translateZ(70px) rotateY(-20deg);
+}
+
+.headliners_bands:has(+*:hover) {
+    /*   :has(+*:hover) = élément précédent    */
+    filter: brightness(0.6);
+    transform: translateZ(150px) rotateY(-40deg);
+}
+
+.headliners_bands:hover {
+    filter: brightness(1);
+    transform: translateZ(200px);
+}
+
+.headliners_bands:hover+* {
+    /*   * = élément suivant    */
+    filter: brightness(0.6);
+    transform: translateZ(150px) rotateY(40deg);
+}
+
+.headliners_bands:hover+*+* {
+    /*   * = élément suivant    */
+    filter: brightness(0.4);
+    transform: translateZ(70px) rotateY(20deg);
+}
+
+.headliners_bands:hover+*+*+* {
+    /*   * = élément suivant    */
+    filter: brightness(0.2);
+    transform: translateZ(30px) rotateY(10deg);
+}
