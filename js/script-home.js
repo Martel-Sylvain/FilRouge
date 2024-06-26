@@ -61,3 +61,51 @@
 
 
 // ----------------------------------------------------------------------
+
+
+// GAME IMAGE 
+function moveImageContinuously() {
+    const image = document.getElementById('game_image');
+
+    function updateImagePosition() {
+        const maxWidth = window.innerWidth - image.clientWidth;
+        const maxHeight = window.innerHeight - image.clientHeight;
+
+        // Position de départ centrée
+        let currentX = maxWidth / 2;
+        let currentY = maxHeight / 2;
+
+        let targetX = Math.random() * maxWidth;
+        let targetY = Math.random() * maxHeight;
+
+        function updateTarget() {
+            targetX = Math.random() * maxWidth;
+            targetY = Math.random() * maxHeight;
+        }
+
+        function animate() {
+            const dx = targetX - currentX;
+            const dy = targetY - currentY;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < 1) {
+                updateTarget();
+            } else {
+                const speed = 2; // Vitesse du mouvement
+                currentX += dx / distance * speed;
+                currentY += dy / distance * speed;
+                image.style.transform = `translate(${currentX}px, ${currentY}px)`;
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        updateTarget();
+        animate();
+    }
+
+    window.addEventListener('resize', updateImagePosition);
+    updateImagePosition();
+}
+
+moveImageContinuously(); // Démarrer le mouvement continu

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles-commons.css">
+    <link rel="stylesheet" href="css/styles-game.css">
+    <link rel="icon" href="./img/Icones/Icone-4.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <img src="./img/Festival_Logos/Logo-1.png" alt="Logo_Valhalla_Festival">
+        <ul class="nav_links">
+            <li><a href="./index-home.html">Home</a></li>
+            <li><a href="./index-line_up.html">Line-up</a></li>
+            <li><a href="./index-running_order.html">Running Order</a></li>
+            <li><a href="./index-tickets.html">Tickets</a></li>
+            <li><a href="./index-shop.html">Shop</a></li>
+            <li><a href="./index-infos.html">Infos</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- Difficulty Selection Screen -->
+        <div class="container" id="difficulty-selection-container">
+            <h2>Select Difficulty Level</h2>
+            <button class="difficulty-button" onclick="startGame('easy')">Easy</button>
+            <button class="difficulty-button" onclick="startGame('medium')">Medium</button>
+            <button class="difficulty-button" onclick="startGame('hard')">Hard</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div class="container" id="game-container" style="display: none;">
+            <div id="logo-container">
+                <img src="" alt="" id="logo">
+            </div>
+            <div id="question-container">
+                <p id="question"></p>
+                <input type="text" id="answer-input" placeholder="Enter your answer">
+            </div>
+            <div id="message-container"></div>
+            <div id="navigation">
+                <button id="submit-button">Submit</button>
+                <button id="next-button" style="display: none;">Next</button>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-container" style="display: none;">
+            <p id="result"></p>
+        </div>
+    </main>
+    <script src="js/script-game.js"></script>
+</body>
+
+</html>

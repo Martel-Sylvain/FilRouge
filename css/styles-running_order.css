@@ -1,5 +1,40 @@
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--background-dark-1);
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400%;
+    background-image: url("../img/Textures/Texture_1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+h1.title_running_order {
+    text-align: center;
+    margin-top: 110px;
+    color: var(--color-2);
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
 .running_order {
-    padding-top: 100px;
+    font-family: Copperlate-Gothic-Bold;
+    color: var(--color-2);
+    padding: 20px 40px;
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
     grid-template-rows: repeat(15, 50px);
@@ -7,51 +42,58 @@
     align-items: center;
 }
 
-/* #region Borders */
-.running_order>div {
-    border: 1px solid black;
+.running_1 {
+    padding-top: 100px;
+}
+
+.colored {
+    background-color: var(--background-grid-1);
+    font-size: 20px;
 }
 
 
-.colored {
-    background-color: green;
+/* #region Borders */
+
+.running_order>div {
+    border: 1px solid var(--grid-color);
 }
 
 div.day {
-    border-top: 2px solid black;
-    border-left: 2px solid black;
+    border-top: 2px solid var(--grid-color);
+    border-left: 2px solid var(--grid-color);
 }
 
 div.hour1 {
-    border-left: 2px solid black;
+    border-left: 2px solid var(--grid-color);
 }
 
 div.hour2 {
-    border-right: 2px solid black;
+    border-right: 2px solid var(--grid-color);
 }
 
 div.hour_14 {
-    border-top: 2px solid black;
+    border-top: 2px solid var(--grid-color);
 }
 
 div.hour_12,
 div.hour_25 {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--grid-color);
 }
 
 
 div.stage {
-    border-top: 2px solid black;
+    border-top: 2px solid var(--grid-color);
 }
 
 div.stage_3 {
-    border-right: 2px solid black;
+    border-right: 2px solid var(--grid-color);
+    ;
 }
 
 div.empty_17,
 div.empty_18,
 div.band_18 {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--grid-color);
 }
 
 /* #endregion border */
@@ -71,7 +113,14 @@ div.band_18 {
     justify-content: center;
 }
 
-/* stages */
+.band:hover {
+    color: var(--color-4);
+    cursor: pointer;
+}
+
+/* #region Grid */
+
+/*stages */
 .stage_1 {
     grid-area: 1 / 2 / 2 / 3;
 }
@@ -332,3 +381,5 @@ div.band_18 {
 .empty_18 {
     grid-area: 13 / 4 / 14 / 5;
 }
+
+/* #endregion Grid */

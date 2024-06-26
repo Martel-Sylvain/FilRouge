@@ -313,49 +313,58 @@ main {
 
 /* #endregion carousels */
 
+
 .content {
     width: min(30vw, 400px);
     position: absolute;
     top: 50%;
     left: 3rem;
     transform: translateY(-50%);
-    font: 400 0.85rem helvetica, sans-serif;
+    font-family: Copperlate-Gothic-Bold;
     color: var(--color-2);
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
     opacity: 0;
     display: none;
     z-index: 2;
+
 }
 
 .content img {
     position: absolute;
-    top: 80%;
+    top: 200px;
+
 }
 
 .content .title {
-    font-family: 'arial-black';
+    font-family: Copperlate-Gothic-Bold;
     text-transform: uppercase;
+
 }
 
 .content .description {
     line-height: 1.7;
     margin: 1rem 0 1.5rem;
     font-size: 0.8rem;
+
 }
 
+
 .content button {
+    font-family: Copperlate-Gothic-Bold;
     width: fit-content;
     background-color: rgba(0, 0, 0, 0.1);
+    font-size: 20px;
     color: var(--color-2);
-    border: 2px solid var(--color-2);
+    border: 1px solid var(--color-2);
     border-radius: 0.25rem;
-    padding: 0.75rem;
+    padding: 15px;
     cursor: pointer;
 }
 
 button:hover {
     color: var(--color-4);
 }
+
 
 .button-active {
     background-color: var(--color-4) !important;

@@ -1,9 +1,26 @@
 /* FONTS */
 
 @font-face {
-    font-family: "Copperlate-Gothic";
+    font-family: "Copperlate-Gothic-Bold";
     src: url("../fonts/COPRGTB.TTF") format("truetype")
 }
+
+@font-face {
+    font-family: "Copperlate-Gothic-Light";
+    src: url("../fonts/COPRGTL.TTF") format("truetype")
+}
+
+@font-face {
+    font-family: "Trade-Winds";
+    src: url("../fonts/TradeWinds-Regular.TTF") format("truetype")
+}
+
+@font-face {
+    font-family: "Metal-Mania";
+    src: url("../fonts/MetalMania-Regular.TTF") format("truetype")
+}
+
+
 
 /* --------------------------------------------------------------------- */
 /* RESET */
@@ -27,9 +44,9 @@
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    z-index: 2;
+    z-index: 20;
     box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
@@ -68,12 +85,14 @@
     color: var(--text-color-2);
     text-decoration: none;
     padding: 0.5em 1em;
-    font-family: "Copperlate-Gothic";
+    font-family: "Copperlate-Gothic-Bold";
     font-size: 25px;
     transition: color 0.3s ease;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: inline-block;
 }
 
 .navbar a:hover {
     color: var(--color-4);
+    transform: rotate(-2deg) scale(1.2);
 }
